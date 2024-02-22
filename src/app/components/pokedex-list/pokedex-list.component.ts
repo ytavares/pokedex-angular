@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PokeapiService } from '../../services/pokeapi.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
@@ -19,6 +19,11 @@ export class PokedexListComponent implements OnInit {
   pageSize: number = 20;
   currentPage: number = 1;
 
+  totalPages: number = 1;
+
+  @Output() totalDataEvent = new EventEmitter<number>();
+  @Output() currentTotalDataEvent = new EventEmitter<number>();
+
   constructor(private pokeapiService: PokeapiService) {}
 
   ngOnInit() {
@@ -26,12 +31,14 @@ export class PokedexListComponent implements OnInit {
   }
 
   loadPokemons() {
-    const offset = Math.max((this.currentPage - 1) * this.pageSize, 0); // Garante que o offset nunca seja negativo
+    const offset = Math.max((this.currentPage - 1) * this.pageSize, 0);
     this.pokeapiService.getPokemons(offset).subscribe((data: any) => {
       this.pokemons = data.results;
       this.totalPokemons = data.count;
+      this.totalPages = Math.ceil(this.totalPokemons / this.pageSize);
+      this.totalDataEvent.emit(this.totalPokemons);
+      this.currentTotalDataEvent.emit(this.currentPage * 20);
     });
-    console.log(this.totalPokemons);
   }
 
   nextPage() {

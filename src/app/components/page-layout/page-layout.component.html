@@ -16,7 +16,7 @@
       <div class="page-layout__itens-quantity">
         <p>Exibindo {{atual}} de {{total}}</p>
       </div>
-      <app-pokedex-list></app-pokedex-list>
+      <app-pokedex-list (totalDataEvent)="receiveTotalDataFromPokelist($event)" (currentTotalDataEvent)="receiveCurrentDataFromPokelist($event)"></app-pokedex-list>
     </div>
   </div>
 </div>

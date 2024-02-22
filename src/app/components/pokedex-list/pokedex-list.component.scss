@@ -1,4 +1,27 @@
 .pokedex-list {
   overflow: auto;
-  max-height: 660px;
+  max-height: 600px;
+  &__pagination{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px 0 16px;
+    button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 60%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__pagination-info{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 450;
+    color: rgba(0, 0, 0, 60%);
+    margin-right: 12px;
+    // deveria ser font Circular Std, mas como era apenas 2 lugares com essa font, optei por deixar todas como roboto
+  }
 }

@@ -14,8 +14,12 @@ export class PageLayoutComponent implements OnInit {
   atual: number | undefined;
   total: number | undefined;
 
-  ngOnInit(): void {
-    this.atual = 20;
-    this.total = 20;
+  ngOnInit(): void {}
+
+  receiveTotalDataFromPokelist(data: number) {
+    this.total = data;
+  }
+  receiveCurrentDataFromPokelist(data: number) {
+    this.atual = data;
   }
 }

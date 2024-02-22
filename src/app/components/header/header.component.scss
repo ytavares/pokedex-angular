@@ -1,0 +1,33 @@
+.header {
+  background: #020202;
+  padding: 21px 28px;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-img {
+  max-width: 173px;
+  max-height: 38px;
+  img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+}
+.user-content {
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  gap: 18px;
+  .material-symbols-outlined {
+    font-size: 24px;
+  }
+}
+.user-title {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 44px;
+}

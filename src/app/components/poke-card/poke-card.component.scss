@@ -1,0 +1,30 @@
+.poke-card{
+  padding: 16px 0 18px 0;
+  display: flex;
+  gap: 17px;
+  border-bottom: 1px solid #BDBDBD;
+  &__figure{
+    border: 1px solid #565656;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 815px;
+  }
+  &__title{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 87%);
+  }
+  &__description {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #565656;
+  }
+}

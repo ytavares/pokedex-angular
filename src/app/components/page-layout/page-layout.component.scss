@@ -50,7 +50,10 @@
       transform: translateY(-50%);
       right: 8px;
       font-size: 17px;
-      color: #000000;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      color: rgba(0, 0, 0, 60%);
     }
   }
   &__search-container input[type="text"] {

@@ -8,9 +8,9 @@
         </div>
         <div class="page-layout__search-container">
           <input #searchInput type="text" placeholder="Buscar" (keyup.enter)="onSearchInput(searchInput.value)">
-          <span class="material-symbols-outlined lupa">
+          <button class="material-symbols-outlined lupa" (click)="onSearchInput(searchInput.value)">
             search
-          </span>
+          </button>
         </div>
       </div>
       <div class="page-layout__itens-quantity">

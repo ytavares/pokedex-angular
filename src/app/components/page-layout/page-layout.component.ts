@@ -28,6 +28,10 @@ export class PageLayoutComponent implements OnInit {
 
   onSearchInput(value: string): void {
     this.searchTerm = value;
+    this.pokedexListComponent.searchPokemon(this.searchTerm.toLowerCase());
+  }
+
+  onClickSearch() {
     this.pokedexListComponent.searchPokemon(this.searchTerm);
   }
 }

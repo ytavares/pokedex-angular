@@ -2,8 +2,9 @@
 
 melhorias:
 
-- foi adicionado um overflow no conteudo de listagem, na versão desktop, para que a usabilidade fique melhor
--
+- foi adicionado um overflow no conteudo de listagem, na versão desktop, para que a usabilidade fique melhor e não tenha que escrolar até o final da página para paginar os pokemons.
+- na documentação indica utilizar a mesma imagem do Caterpie, mas utilizei as imagens próprias de cada pokemon, disponibilizadas pela api.
+- Foi adicionado um click na lupa de busca e realizar a busca ao apertar o botão enter
 
 observações:
 

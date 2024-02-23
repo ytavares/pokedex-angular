@@ -10,6 +10,7 @@ observações:
 
 - Na descrição do desafio proposto, é informado que apenas a font 'Roboto' é utilizada no projeto, porém, na paginação e na exibição de quantidade de itens, é usada a fonte 'Circular Std', optei por usar apenas a 'Roboto' conforme foi informado no doc.
 - No layout responsivo, nenhuma fonte é alterada o line-height, o que visualmente não condiz com o layout. Alterei para ficar mais parecido com layout.
+- Gostaria de implementar todas as melhorias indicadas no doc do desafio, porém não consegui finalizar a tempo, então priorizei na entrega do produto solicitado.
 
 # PokedexAngular
 

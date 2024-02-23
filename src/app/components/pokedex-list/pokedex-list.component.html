@@ -1,28 +1,29 @@
 <div class="pokedex-list">
   <div *ngFor="let pokemon of pokemons; let i = index">
-    <app-poke-card url="{{pokemon.url}}" nome="{{pokemon.name}}" [code]="(this.currentPage - 1) * this.pageSize + i + 1"></app-poke-card>
+    <app-poke-card *ngIf="!searched" url="{{pokemon.url}}" [nome]="pokemon.name" [code]="setPokemonCode(i)"></app-poke-card>
+    <app-poke-card *ngIf="searched" url="{{pokemon.sprites.front_default}}" [nome]="pokemon.name" [code]="pokemon.id"></app-poke-card>
   </div>
 </div>
 <div class="pokedex-list__pagination">
   <p class="pokedex-list__pagination-info">
     {{this.currentPage}} de {{this.totalPages}} páginas
   </p>
-  <button (click)="nextPage()">
+  <button (click)="firstPage()" [disabled]="isFirstPage">
     <span class="material-symbols-outlined">
       first_page
     </span>
   </button>
-  <button (click)="previousPage()">
+  <button (click)="previousPage()" [disabled]="disabledPreview && isFirstPage">
     <span class="material-symbols-outlined">
       chevron_left
     </span>
   </button>
-  <button (click)="nextPage()">
+  <button (click)="nextPage()" [disabled]="disabledNext || isLastPage">
     <span class="material-symbols-outlined">
       navigate_next
     </span>
   </button>
-  <button (click)="nextPage()">
+  <button (click)="lastPage()" [disabled]="isLastPage">
     <span class="material-symbols-outlined">
       last_page
     </span>

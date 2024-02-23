@@ -15,6 +15,10 @@
       align-items: center;
       justify-content: center;
     }
+    button[disabled], button:disabled {
+      color: rgba(0, 0, 0, 20%);
+      cursor: inherit;
+    }
   }
   &__pagination-info{
     font-size: 14px;
@@ -23,5 +27,16 @@
     color: rgba(0, 0, 0, 60%);
     margin-right: 12px;
     // deveria ser font Circular Std, mas como era apenas 2 lugares com essa font, optei por deixar todas como roboto
+  }
+  @media (max-width: 768px) {
+    overflow: inherit;
+    max-height: 100%;
+    &__pagination{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 0 53px;
+    }
+
   }
 }

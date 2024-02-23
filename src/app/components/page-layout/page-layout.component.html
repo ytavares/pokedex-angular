@@ -7,7 +7,7 @@
           <p class="page-layout__description">pokebusca</p>
         </div>
         <div class="page-layout__search-container">
-          <input type="text" placeholder="Buscar">
+          <input #searchInput type="text" placeholder="Buscar" (keyup.enter)="onSearchInput(searchInput.value)">
           <span class="material-symbols-outlined lupa">
             search
           </span>
@@ -16,7 +16,7 @@
       <div class="page-layout__itens-quantity">
         <p>Exibindo {{atual}} de {{total}}</p>
       </div>
-      <app-pokedex-list (totalDataEvent)="receiveTotalDataFromPokelist($event)" (currentTotalDataEvent)="receiveCurrentDataFromPokelist($event)"></app-pokedex-list>
+      <app-pokedex-list [searchTerm]="searchTerm" (totalDataEvent)="receiveTotalDataFromPokelist($event)" (currentTotalDataEvent)="receiveCurrentDataFromPokelist($event)"></app-pokedex-list>
     </div>
   </div>
 </div>

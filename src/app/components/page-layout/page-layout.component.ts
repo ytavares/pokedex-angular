@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, input } from '@angular/core';
 import { PokedexListComponent } from '../pokedex-list/pokedex-list.component';
 import { PokeapiService } from '../../services/pokeapi.service';
 
@@ -11,8 +11,11 @@ import { PokeapiService } from '../../services/pokeapi.service';
   styleUrl: './page-layout.component.scss',
 })
 export class PageLayoutComponent implements OnInit {
+  @ViewChild(PokedexListComponent)
+  pokedexListComponent!: PokedexListComponent;
   atual: number | undefined;
   total: number | undefined;
+  searchTerm: string = '';
 
   ngOnInit(): void {}
 
@@ -21,5 +24,10 @@ export class PageLayoutComponent implements OnInit {
   }
   receiveCurrentDataFromPokelist(data: number) {
     this.atual = data;
+  }
+
+  onSearchInput(value: string): void {
+    this.searchTerm = value;
+    this.pokedexListComponent.searchPokemon(this.searchTerm);
   }
 }

@@ -1,3 +1,15 @@
+# Infos referentes ao teste
+
+melhorias:
+
+- foi adicionado um overflow no conteudo de listagem, na versão desktop, para que a usabilidade fique melhor
+-
+
+observações:
+
+- Na descrição do desafio proposto, é informado que apenas a font 'Roboto' é utilizada no projeto, porém, na paginação e na exibição de quantidade de itens, é usada a fonte 'Circular Std', optei por usar apenas a 'Roboto' conforme foi informado no doc.
+- No layout responsivo, nenhuma fonte é alterada o line-height, o que visualmente não condiz com o layout. Alterei para ficar mais parecido com layout.
+
 # PokedexAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.9.

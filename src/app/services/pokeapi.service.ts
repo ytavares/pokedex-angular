@@ -16,6 +16,10 @@ export class PokeapiService {
     );
   }
 
+  getPokemonsSearch(term: string): Observable<any> {
+    return this.httpClient.get(`${this.apiUrl}/pokemon/${term}`);
+  }
+
   getPokemonProfile(code?: number): Observable<any> {
     return this.httpClient.get(`${this.apiUrl}/pokemon/${code}`);
   }
